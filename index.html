@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Appointment Scheduler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Phosphor Icons for premium aesthetic -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="app-container">
+        <header class="chat-header">
+            <div class="header-left">
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <i class="ph ph-robot"></i>
+                    </div>
+                    <div class="status-indicator"></div>
+                </div>
+                <div class="header-info">
+                    <h1>Gangwal AI</h1>
+                    <p>AI Scheduling Assistant</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="icon-btn" id="reset-btn" title="Reset Conversation">
+                    <i class="ph ph-arrows-counter-clockwise"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="chat-window" id="chat-window">
+            <!-- Messages will be injected here -->
+            <div class="chat-content" id="chat-content">
+                <div class="message-group ai-message">
+                    <div class="message-bubble blur-effect">
+                        Hello! 👋
+                        I can help you book a consultation with Dr. Abhy Gangwal at Great Lakes Institute of Management,
+                        Chennai.
+
+                        Let’s get started—may I know your full name, mobile number and desired date of appointment?
+                    </div>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+
+            <div class="typing-indicator hidden" id="typing-indicator">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="input-area blur-effect">
+            <form id="chat-form">
+                <div class="input-wrapper">
+                    <!-- Dynamic input based on state -->
+                    <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+
+                    <button type="submit" class="send-btn" id="send-btn">
+                        <i class="ph ph-paper-plane-right"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
